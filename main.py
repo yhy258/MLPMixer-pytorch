@@ -23,7 +23,7 @@ dataloader = DataLoader(dataset, batch_size =32, shuffle = True)
 val_dataloader = DataLoader(valid_dataset, batch_size =32, shuffle = True)
 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = MLPMixer(3, 256, 128, 1024, img_size = 32, patch_size = 4, depth = 8, num_classes = 10)
+model = MLPMixer(in_channels = 3, dim = 256, token_mix = 128, channel_mix = 1024, img_size = 32, patch_size = 4, depth = 8, num_classes = 10)
 model = model.to(DEVICE)
 
 optim = torch.optim.Adam(params=model.parameters(), lr=1e-4)
