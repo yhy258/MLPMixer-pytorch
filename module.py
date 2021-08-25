@@ -51,6 +51,13 @@ class ChannelMixing(nn.Module):
         return x
 
 
+    
+"""
+    in_channels : 3 (RGB)
+    dim : Patch embedding dimension
+    token_mix : Token Mixing Stage's hidden dimension
+    channel_mix : Channel Mixing Stage's hidden dimension
+"""
 class MLPMixer(nn.Module):
     def __init__(self, in_channels, dim, token_mix, channel_mix, img_size=32, patch_size=4, depth=8, num_classes=10):
         super().__init__()
