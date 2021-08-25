@@ -1,1 +1,4 @@
 # MLPMixer-pytorch
+  
+  
+CIFAR10
